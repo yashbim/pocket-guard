@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun vibrate_function() {
         val vibrator = getSystemService(VIBRATOR_SERVICE) as Vibrator
-        var time : Int = 1500;
+        var time : Int = 1000;
         if (vibrator != null) {
             val vibrationEffect =
                 VibrationEffect.createOneShot(time.toLong(), VibrationEffect.DEFAULT_AMPLITUDE)
