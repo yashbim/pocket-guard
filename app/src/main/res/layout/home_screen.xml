@@ -4,20 +4,49 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black"
     tools:context=".MainActivity"
     tools:layout_editor_absoluteX="0dp"
-    tools:layout_editor_absoluteY="-64dp"
-    android:background="@color/black">
+    tools:layout_editor_absoluteY="-64dp">
 
 
     <Button
         android:id="@+id/startvibration"
         android:layout_width="248dp"
         android:layout_height="76dp"
-        android:text="Vibrate"
+        android:layout_marginBottom="216dp"
+        android:backgroundTint="#5E17EB"
+        android:text="Start"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="324dp"
+        android:layout_height="299dp"
+        app:layout_constraintBottom_toTopOf="@+id/startvibration"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.577"
+        app:srcCompat="@drawable/pocketguard_black" />
+
+    <EditText
+        android:id="@+id/interval"
+        android:layout_width="255dp"
+        android:layout_height="75dp"
+        android:gravity="center"
+        android:inputType="number"
+        android:hint="Set Interval"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startvibration"
+        app:layout_constraintVertical_bias="0.382" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
