@@ -1,10 +1,10 @@
 package com.example.pocket_guard
 
-import android.os.Build
 import android.os.Bundle
 import android.os.VibrationEffect
 import android.os.Vibrator
 import android.widget.Button
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 
@@ -15,17 +15,25 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.home_screen)
 
+        var time : Int = 750;
+
 
 //        Vibration Button
         val startvibration: Button = findViewById(R.id.startvibration)
         startvibration.setOnClickListener{
-            vibrate_function()
+
+            val vibrator = getSystemService(VIBRATOR_SERVICE) as Vibrator
+            var interval : Int = 30000
+            var intervalInt: Int
+                Toast.makeText(applicationContext,"Time interval set to 30s", Toast.LENGTH_SHORT).show()
+//                vibrate(intervalInt,time)
+
+
         }
     }
 
-    private fun vibrate_function() {
+    private fun vibrate(interval: Int, time: Int) {
         val vibrator = getSystemService(VIBRATOR_SERVICE) as Vibrator
-        var time : Int = 1000;
         if (vibrator != null) {
             val vibrationEffect =
                 VibrationEffect.createOneShot(time.toLong(), VibrationEffect.DEFAULT_AMPLITUDE)
@@ -33,7 +41,6 @@ class MainActivity : AppCompatActivity() {
 
         }
     }
-
 
 
 }
