@@ -17,17 +17,17 @@
         android:layout_marginTop="70dp"
        android:layout_marginBottom="0dp"/>
 
-<!--    <Spinner-->
-<!--        android:id="@+id/spinner_time"-->
-<!--        android:layout_width="248dp"-->
-<!--        android:layout_height="59dp"-->
-<!--        android:layout_gravity="center_horizontal"-->
-<!--        android:layout_marginTop="50dp"-->
-<!--        android:layout_marginBottom="0dp"-->
-<!--        android:backgroundTint="#5E17EB"-->
-<!--        android:text="Start"-->
-<!--        android:textColor="@color/white"-->
-<!--        android:spinnerMode="dropdown" />-->
+    <Spinner
+        android:id="@+id/spinner_time"
+        android:layout_width="248dp"
+        android:layout_height="59dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="0dp"
+        android:backgroundTint="#5E17EB"
+        android:text="Start"
+        android:textColor="@color/white"
+        android:spinnerMode="dropdown" />
 
     <Button
         android:id="@+id/startvibration"
