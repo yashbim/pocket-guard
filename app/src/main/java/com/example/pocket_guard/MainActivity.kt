@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var vibrator: Vibrator
     private var isVibrating = false
     private val time: Int = 750 // Vibration duration in milliseconds
-    private val interval: Long = 10000 // 30 seconds in milliseconds
+    private val interval: Long = 10000 //  seconds in milliseconds
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,12 +29,18 @@ class MainActivity : AppCompatActivity() {
         startVibrationButton.setOnClickListener {
             if (!isVibrating) {
                 isVibrating = true
-                Toast.makeText(applicationContext, "Vibrating every 30 seconds", Toast.LENGTH_SHORT).show()
+                Toast.makeText(applicationContext, "Vibrating every "+interval/1000+" seconds", Toast.LENGTH_SHORT).show()
                 startVibrating()
             } else {
                 isVibrating = false
                 handler.removeCallbacksAndMessages(null)
                 Toast.makeText(applicationContext, "Vibration stopped", Toast.LENGTH_SHORT).show()
+            }
+
+            if (startVibrationButton.text == "Start") {
+                startVibrationButton.setText("Stop")
+            } else {
+                startVibrationButton.setText("Start")
             }
         }
     }
