@@ -24,8 +24,7 @@ class MainActivity : AppCompatActivity() {
 
             val vibrator = getSystemService(VIBRATOR_SERVICE) as Vibrator
             var interval : Int = 30000
-            var intervalInt: Int
-                Toast.makeText(applicationContext,"Time interval set to 30s", Toast.LENGTH_SHORT).show()
+            Toast.makeText(applicationContext,"Time interval set to 30s", Toast.LENGTH_SHORT).show()
 //                vibrate(intervalInt,time)
 
 
