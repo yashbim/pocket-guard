@@ -22,7 +22,9 @@
         </activity>
 
         <!-- Declare the VibrationService -->
-        <service android:name=".VibrationService"/>
+        <service android:name=".VibrationService"
+                    android:foregroundServiceType="dataSync"
+            tools:ignore="ForegroundServicePermission" />
     </application>
 
 </manifest>
