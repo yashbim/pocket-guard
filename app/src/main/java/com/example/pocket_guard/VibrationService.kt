@@ -32,7 +32,7 @@ class VibrationService : Service() {
         val notification: Notification = NotificationCompat.Builder(this, channelId)
             .setContentTitle("Pocket Guard")
             .setContentText("Vibrating every ${interval / 1000} seconds")
-            .setSmallIcon(R.drawable.ic_vibration) // Replace with your own icon
+            .setSmallIcon(R.drawable.pocketguardlogo) // Replace with your own icon
             .build()
 
         startForeground(1, notification)
